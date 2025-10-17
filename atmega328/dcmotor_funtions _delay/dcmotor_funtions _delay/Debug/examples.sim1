@@ -1,0 +1,21 @@
+<circuit version="1.1.0-SR1" rev="2005" stepSize="1000000" stepsPS="1000000" NLsteps="100000" reaStep="1000000" animate="0" >
+
+<item itemtype="MCU" CircId="mega328-1" mainComp="false" Show_id="true" Show_Val="false" Pos="-240,-192" rotation="0" hflip="1" vflip="1" label="mega328-1" idLabPos="0,-20" labelrot="0" valLabPos="-16,20" valLabRot="0" Frequency="16 MHz" Program="E:/Embedded__System/atmega328/dcmotor_funtions _delay/dcmotor_funtions _delay/Debug/dcmotor_funtions _delay.hex" Auto_Load="false" saveEepr="true" Logic_Symbol="false" Rst_enabled="false" Ext_Osc="false" Wdt_enabled="false" Clk_Out="false" MainMcu="true" SerialMon="-1" />
+
+<item itemtype="Subcircuit" CircId="L293-36" mainComp="false" Show_id="true" Show_Val="false" Pos="-72,-116" rotation="0" hflip="1" vflip="1" label="L293-36" idLabPos="0,-20" labelrot="0" valLabPos="-16,20" valLabRot="0" Input_High_V="2.5 V" Input_Low_V="2.5 V" Input_Imped="1e+09 Ω" Out_High_V="5 V" Out_Low_V="0 V" Out_Imped="40 Ω" Tpd_ps="10 ns" Tr_ps="3 ns" Tf_ps="4 ns" Logic_Symbol="true" />
+
+<item itemtype="DcMotor" CircId="DcMotor-39" mainComp="false" Show_id="true" Show_Val="false" Pos="76,-140" rotation="0" hflip="1" vflip="1" label="DcMotor-39" idLabPos="-22,-48" labelrot="0" valLabPos="-14,36" valLabRot="0" RPM_Nominal="60 _RPM" Volt_Nominal="5 V" Resistance="100 Ω" />
+
+<item itemtype="Fixed Voltage" CircId="Fixed Voltage-42" mainComp="false" ShowProp="Voltage" Show_id="false" Show_Val="true" Pos="-148,-28" rotation="-90" hflip="1" vflip="1" label="Fixed Voltage-42" idLabPos="-64,-24" labelrot="0" valLabPos="-16,8" valLabRot="0" Voltage="5 V" Out="true" />
+
+<item itemtype="Connector" uid="Connector-63" startpinid="L293-36-1Y" endpinid="DcMotor-39-lPin" pointList="-32,-108,36,-108,36,-140" />
+
+<item itemtype="Connector" uid="Connector-64" startpinid="L293-36-2Y" endpinid="DcMotor-39-rPin" pointList="-32,-100,116,-100,116,-140" />
+
+<item itemtype="Connector" uid="Connector-69" startpinid="mega328-1-PORTB5" endpinid="L293-36-1A" pointList="-200,-112,-80,-112,-80,-108" />
+
+<item itemtype="Connector" uid="Connector-75" startpinid="Fixed Voltage-42-outnod" endpinid="L293-36-12EN" pointList="-148,-44,-148,-92,-80,-92" />
+
+<item itemtype="Connector" uid="Connector-80" startpinid="L293-36-2A" endpinid="mega328-1-PORTB4" pointList="-80,-100,-192,-100,-192,-104,-200,-104" />
+
+</circuit>
